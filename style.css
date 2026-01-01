@@ -4,7 +4,9 @@
   padding: 0;
 }
 
-
+html, body {
+  height: 100%;
+}
 
 body {
   min-height: 100vh;
@@ -45,9 +47,9 @@ body {
 .background {
   position: fixed;
   inset: 0;
- /* background: url("images/fundo.jpg") center / cover no-repeat;*/
-  opacity: 0.25;
-  filter: blur(2px);
+ background: url("images/fundo.png") center / cover no-repeat;
+  opacity: 0.35;
+  
   z-index: 0;
 }
 
@@ -79,7 +81,7 @@ canvas {
   position: relative;
   z-index: 2;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
+  
   padding: 20px 22px;
   border-radius: 22px;
   width: 100%;
