@@ -61,11 +61,13 @@ canvas {
   z-index: 2;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
-  padding: 35px 40px;
+  padding: 20px 22px;
   border-radius: 22px;
+  width: 100%;
   max-width: 720px;
   text-align: center;
   box-shadow: 0 0 35px rgba(255,255,255,0.08);
+   -webkit-overflow-scrolling: touch;
 }
 
 h1 {
