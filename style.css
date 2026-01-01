@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: #0b0f17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* BOTÃO FECHAR FIXO */
+#closeBtnFixed {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  font-size: 1.4em;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+
+#closeBtnFixed:active {
+  transform: scale(0.95);
+}
+
+/* IMAGEM DE FUNDO */
+.background {
+  position: fixed;
+  inset: 0;
+  background: url("images/fundo.jpg") center / cover no-repeat;
+  opacity: 0.25;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+/* CANVAS DOS FOGOS */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+/* CARTÃO */
+.card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  padding: 35px 40px;
+  border-radius: 22px;
+  max-width: 720px;
+  text-align: center;
+  box-shadow: 0 0 35px rgba(255,255,255,0.08);
+}
+
+h1 {
+  font-size: 2.6em;
+  margin-bottom: 15px;
+}
+
+.message {
+  font-size: 1.15em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.name {
+  font-size: 2.3em;
+  opacity: 0;
+  transition: all 1.2s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.all-names {
+  opacity: 0;
+  transition: opacity 3s ease;
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-top: 25px;
+}
+
+.final-message {
+  opacity: 0;
+  transition: opacity 3s ease;
+  margin-top: 30px;
+  font-size: 1.25em;
+}
+
+.glow {
+  text-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.actions button {
+  padding: 12px 26px;
+  font-size: 1em;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+#startOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11,15,23,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+#startOverlay h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#startOverlay p {
+  font-size: 1.1em;
+  opacity: 0.85;
+}
+
+
+@media (max-width: 600px) {
+  h1 { font-size: 2.1em; }
+  .message { font-size: 1.05em; }
+  .name { font-size: 2em; }
+  .card { padding: 28px 22px; margin: 12px; }
+}
